@@ -7,13 +7,12 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 import './Navbar.css'
-import Loginpopup from './Loginpopup';
-
+import dynamic from 'next/dynamic';
 
 
 const Navbar = () => {
     const [clicked, setClicked] = useState(false);
-
+    const DynamicLoginPopup = dynamic(() => import('./LoginPopup.jsx'), { ssr: false });
     const handleClick = () => {
         setClicked(!clicked);
     };
@@ -55,7 +54,7 @@ const Navbar = () => {
 
                 </div>
                 {/* <button className="sign-in">Sign in</button> */}
-<Loginpopup />
+<DynamicLoginPopup/>
             </nav>
 
         </div>
