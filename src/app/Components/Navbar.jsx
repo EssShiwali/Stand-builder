@@ -12,7 +12,7 @@ import dynamic from 'next/dynamic';
 
 const Navbar = () => {
     const [clicked, setClicked] = useState(false);
-    const DynamicLoginPopup = dynamic(() => import('./LoginPopup'), { ssr: false });
+    const DynamicLoginPopup = dynamic(() => import('./Loginpopup'), { ssr: false });
     const handleClick = () => {
         setClicked(!clicked);
     };
@@ -25,11 +25,11 @@ const Navbar = () => {
                 <div ><button className="header-button ">Get 5 free quotations</button></div>
             </div>
             <nav className="navbar">
-                 <input type='checkbox' id='menu-click' />
-                <label htmlFor="menu-click" className="menu-btn hamburger"  onClick={handleClick}>
+                <input type='checkbox' id='menu-click' />
+                <label htmlFor="menu-click" className="menu-btn hamburger" onClick={handleClick}>
                     {/* <RxHamburgerMenu className="hamburger" /> */}
                     {clicked ? <RxCross1 /> : <RxHamburgerMenu />}
-                </label> 
+                </label>
                 <div className="nav-links">
                     <div class="dropdown">
                         <button class="dropbtn">EXHIBITION STAND WORLDWIDE
@@ -54,7 +54,7 @@ const Navbar = () => {
 
                 </div>
                 {/* <button className="sign-in">Sign in</button> */}
-<DynamicLoginPopup/>
+                <DynamicLoginPopup />
             </nav>
 
         </div>
