@@ -12,7 +12,7 @@ import dynamic from 'next/dynamic';
 
 const Navbar = () => {
     const [clicked, setClicked] = useState(false);
-    const DynamicLoginPopup = dynamic(() => import('./LoginPopup.jsx'), { ssr: false });
+    const DynamicLoginPopup = dynamic(() => import('./LoginPopup'), { ssr: false });
     const handleClick = () => {
         setClicked(!clicked);
     };
