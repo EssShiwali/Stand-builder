@@ -39,7 +39,7 @@
 
 .nav-links li {
     cursor: pointer;
-    padding: 25px 16px;
+    padding: 22px 16px;
 }
 
 .nav-links li:hover {
@@ -241,6 +241,9 @@ li.res-drp:hover {
     cursor: auto !important;
 }
 
+.dialog__overlay{
+    background-color: hsl(0deg 0.9% 6.24% / 51%);
+}
 
 @media(max-width:850px) {
     .hamburger {

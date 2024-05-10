@@ -1,9 +1,10 @@
 
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
+// const inter = Inter({ subsets: ["latin"] });
 import "./globals.css";
+import Navbar from "./Components/Navbar";
 
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -18,10 +19,11 @@ export default function RootLayout({ children }) {
    
    
     
-      <body className={inter.className}>
+      <body >
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css" />
+        <Navbar />
         {children}
-
+     
       </body>
     </html>
   );

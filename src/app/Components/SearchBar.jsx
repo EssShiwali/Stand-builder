@@ -107,7 +107,7 @@ const SearchBar = () => {
                 />
                 <button onClick={handleSearchClick} className='search-btn'>Search <IoIosSearch style={{ "marginBottom": "-3px" }} /></button>
               </div>
-              {loading && <span>Loading</span>}
+              {loading && <span class="loader"></span>}
               {!loading && builders.length === 0 && searchPerformed && <p className="not-found">No builders found</p>}
             </div></div>
           <div className="col-3 col-m-1"></div>

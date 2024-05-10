@@ -2,13 +2,14 @@
 
 *{
   scroll-behavior: smooth;
+
 }
 :root {
   --main-clr: #FA7070;
   --sub-clr:#FEFDED;
   --green:#C6EBC5;
   --grn-dark:#A1C398;
- 
+
 }
 
 body {
