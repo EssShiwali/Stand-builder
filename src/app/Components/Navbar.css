@@ -1,0 +1,337 @@
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+    background-color: var(--main-clr);
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.navbar {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--sub-clr);
+    color: black;
+    height: 70px;
+    box-shadow: 0px 2px 7px rgba(159, 159, 159, 0.669);
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    z-index: 3;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    transition: .3s;
+}
+
+.nav-links li {
+    cursor: pointer;
+    padding: 25px 16px;
+}
+
+.nav-links li:hover {
+    background-color: var(--green);
+}
+
+.logo {
+    display: flex;
+    font-size: 6rem;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+.header-button,
+.sign-in {
+    background-color: var(--green);
+    border: 0px;
+    padding: 12px;
+    border-radius: 15px;
+    text-transform: uppercase;
+}
+
+.header-button:hover,
+.sign-in:hover {
+    background-color: var(--grn-dark);
+    transition: 0.3s;
+    /* color: white; */
+}
+
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    padding: 25px 16px;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.dropbtn:hover {
+    background-color: var(--green);
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.res-drpbtn,
+#drp-click {
+    display: none;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    text-transform: uppercase;
+    position: absolute;
+    background-color: #f9f9ed;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 550px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease;
+    margin-top: -1px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #C6EBC5;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    max-height: 350px;
+    overflow-y: auto;
+
+}
+
+.dropdown .rotate1 {
+    transition: 0.3s;
+}
+
+.dropdown:hover .rotate1 {
+    rotate: 180deg;
+}
+
+.dropdown-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.dropdown-content::-webkit-scrollbar-track {
+    background: rgb(196, 194, 194);
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+    background-color: var(--main-clr);
+}
+
+
+
+#usa:checked~.usaList,
+#uk:checked~.ukList,
+#uae:checked~.uaeList,
+#germany:checked~.germanyList,
+#france:checked~.franceList,
+#italy:checked~.italyList,
+#switzerland:checked~.switzerlandList,
+#netherlands:checked~.netherlandsList,
+#spain:checked~.spainList,
+#belgium:checked~.belgiumList,
+#indonesia:checked~.indonesiaList,
+#brazil:checked~.brazilList,
+#india:checked~.indiaList,
+#russia:checked~.russiaList,
+#singapore:checked~.singaporeList,
+#sKorea:checked~.sKoreaList,
+#iran:checked~.iranList,
+#kuwait:checked~.kuwaitList,
+#qatar:checked~.qatarList,
+#saudi:checked~.saudiList,
+#turkey:checked~.turkeyList,
+#australia:checked~.australiaList,
+#canada:checked~.canadaList,
+#thailand:checked~.thailandList {
+    max-height: 500px;
+
+}
+
+.inner-drop {
+    display: none;
+}
+
+.inner-drop+label .rotate2 {
+    transition: .2s;
+    cursor: pointer;
+}
+
+/* Rotate arrow when dropdown is active */
+.inner-drop:checked+label .rotate2 {
+    rotate: 45deg;
+
+}
+
+.inner-list {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .3s;
+}
+
+.inner-cities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-top: 1px solid #608756;
+    border-bottom: 1px solid #608756;
+    padding: 10px;
+}
+
+.inner-cities span {
+    cursor: pointer;
+    border: 1px solid #608756;
+    font-weight: 500;
+    padding: 5px;
+    color: #608756;
+
+}
+
+.inner-cities span:hover {
+    background-color: #C6EBC5;
+
+}
+
+#menu-click,
+.hamburger {
+    display: none;
+    padding-right: 21px;
+    font-size: 1.4rem;
+    z-index: 3;
+}
+
+li.res-drp:hover {
+    background-color: transparent !important;
+    cursor: auto !important;
+}
+
+
+@media(max-width:850px) {
+    .hamburger {
+        display: block;
+    }
+
+
+    .navbar {
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+        gap: 28px;
+
+    }
+
+    .nav-links {
+        width: 300px;
+        position: fixed;
+        left: -100%;
+        top: 129px;
+        height: 100%;
+        display: block;
+        background-color: #FEFDED;
+        transition: 0.3s;
+        box-shadow: 0px 13px 20px #dddddd;
+    }
+
+    .nav-links ul {
+        display: block;
+        margin-left: -34px;
+
+    }
+
+    #menu-click:checked~.nav-links {
+        left: 0%;
+        z-index: 3
+    }
+
+    .nav-links li {
+        padding: 28px 11px;
+        margin-left: -6px;
+        border-bottom: 2px solid #FA7070;
+    }
+
+
+    #drp-click:checked~.res-drpbtn .dropdown-content {
+        max-height: 350px;
+        overflow-y: auto;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .res-drpbtn {
+        display: block;
+        padding: 0px;
+    }
+
+    .dropdown-content {
+        width: 108%;
+        margin: 25px 0 -18px -11px;
+        position: static;
+        box-shadow: none;
+        background-color: #FEFDED;
+    }
+
+    .res-drpbtn .rotate1 {
+        transition: 0.3s;
+    }
+
+    #drp-click:checked+label .rotate1 {
+        rotate: 180deg;
+
+    }
+
+    .inner-list {
+        overflow-y: auto;
+    }
+
+    .dropbtn:hover,
+    .nav-links li:hover {
+        background-color: transparent;
+    }
+
+}
+
+@media(max-width:460px){
+.header-button{
+    margin-right: 8px; 
+    padding: 7px;
+    font-size: 10px;
+}
+   
+}
