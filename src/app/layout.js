@@ -1,5 +1,7 @@
+
 import { Inter } from "next/font/google";
 import "./globals.css";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +13,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css" />
+      <body className={inter.className}>
+        
+        {children}
+
+      </body>
     </html>
   );
 }

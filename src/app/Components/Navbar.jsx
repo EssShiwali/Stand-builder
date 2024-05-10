@@ -7,6 +7,8 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 import './Navbar.css'
+import Loginpopup from './Loginpopup';
+
 
 
 const Navbar = () => {
@@ -52,8 +54,8 @@ const Navbar = () => {
                     </ul>
 
                 </div>
-                <button className="sign-in">Sign in</button>
-
+                {/* <button className="sign-in">Sign in</button> */}
+<Loginpopup />
             </nav>
 
         </div>
