@@ -2,20 +2,17 @@
     --m-l: 3%;
 }
 
-.searchBar-main {
-    white-space: nowrap;
-    margin-left: var(--m-l);
-}
-
 .search-box {
     padding: 200px 0 100px 0;
-   
+
 }
 
 .serach-heading {
     margin-left: var(--m-l);
     text-transform: uppercase;
     font-weight: 800;
+    color: white;
+    font-size: 3rem;
 }
 
 
@@ -29,16 +26,6 @@
     margin-left: var(--m-l);
 }
 
-.search-input {
-    border: 0px;
-    border-bottom: 2px solid rgb(50, 51, 52);
-    background-color: transparent;
-    padding-left: 20px;
-    position: relative;
-    height: 35px;
-    width: 25rem;
-    font-size: 1rem;
-}
 
 
 .card-content {
@@ -50,13 +37,12 @@
 
 .builder-card {
     display: flex;
-    background-color: rgb(243, 243, 243);
     border: 1px solid #ded7d7;
     width: 530px;
     height: 230px;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0px -1px 8px #bbb
+
 }
 
 .builder-card:hover {
@@ -67,42 +53,12 @@
 
 .builder-card img {
     width: 200px;
-    border-right: 5px solid #383131;
     height: 100%;
-}
-
-.search-input:focus {
-    outline: none;
-}
-
-
-.search-btn {
-    border: 2px solid rgb(50, 51, 52);
-    background-color: transparent;
-    border-radius: 22px;
-    color: rgb(113, 112, 112);
-    width: 91px;
-    padding: 8px;
 
 }
 
-.search-btn:hover {
-    background-color: transparent;
-    transform: scale(1.03);
-    transition: 0.3s;
-}
-
-.loaction-iconSrch {
-    position: absolute;
-    z-index: 1;
-    margin: 9px 0 0 0px;
-}
 
 
-
-.rating {
-    color: #fbd431;
-}
 
 .loader {
     width: 48px;
@@ -113,16 +69,22 @@
     border-right: 3px solid transparent;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
-  }
-  
-  @keyframes rotation {
+}
+
+@keyframes rotation {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  } 
+}
+
+.loader-box {
+    margin-top: 30px;
+    text-align: center;
+}
 
 .card-flex {
     display: flex;
@@ -150,7 +112,7 @@
 }
 
 .page-link:hover {
-    background-color: rgba(250, 239, 239, 0.806);
+    background-color: var(--sub-clr);
 }
 
 li.page-item.active {
@@ -159,26 +121,196 @@ li.page-item.active {
 }
 
 .not-found {
-    margin-left: var(--m-l);
+    /* margin-left: var(--m-l); */
+    text-align: center;
 }
 
 .search-box {
-    background-image: url('./Photo/backimage.jpg');
+    background: linear-gradient(rgb(18 21 23 / 7%), rgb(6 12 18 / 93%)), url(/_next/static/media/backimage.4622a06d.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 120px;
+    height: 10rem;
+    background-attachment: fixed;
+    color: white;
 }
 
+
 .searchbox2 {
-    margin-top: -85px;
-    background-color: white;
-    /* padding: 3%; */
-    padding: 6px 0px 41px 9px;
-    border: 4px solid var(--main-clr);
+    margin-top: -14%;
+    text-align: center;
+
 }
+
+.item-1,
+.item-2,
+.item-3 {
+    position: absolute;
+    display: block;
+    top: 5em;
+
+    width: 60%;
+
+    font-size: 2em;
+
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.item-1 {
+    animation-name: anim-1;
+}
+
+.item-2 {
+    animation-name: anim-2;
+}
+
+.item-3 {
+    animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+
+    0%,
+    8.3% {
+        left: -100%;
+        opacity: 0;
+    }
+
+    8.3%,
+    25% {
+        left: 25%;
+        opacity: 1;
+    }
+
+    33.33%,
+    100% {
+        left: 110%;
+        opacity: 0;
+    }
+}
+
+@keyframes anim-2 {
+
+    0%,
+    33.33% {
+        left: -100%;
+        opacity: 0;
+    }
+
+    41.63%,
+    58.29% {
+        left: 25%;
+        opacity: 1;
+    }
+
+    66.66%,
+    100% {
+        left: 110%;
+        opacity: 0;
+    }
+}
+
+@keyframes anim-3 {
+
+    0%,
+    66.66% {
+        left: -100%;
+        opacity: 0;
+    }
+
+    74.96%,
+    91.62% {
+        left: 25%;
+        opacity: 1;
+    }
+
+    100% {
+        left: 110%;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+#search-wrapper {
+    display: flex;
+    align-items: stretch;
+    border-radius: 50px;
+    background: linear-gradient(45deg, var(--main-clr), var(--sub-clr));
+    overflow: hidden;
+    margin: auto;
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    max-width: 568px;
+    border: 2px solid rgb(255 255 255);
+    box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.273);
+    /* box-shadow: 0 0 10px rgba(20,30,81,1),
+    0 0 20px 5px rgba(0,52,255,0.8),
+    -1px -3px 13px 6px rgba(25,71,85,0.5); */
+
+}
+
+#search-wrapper input {
+    background-color: transparent;
+    color: #c1c1c1;
+
+}
+
+#search-wrapper input::placeholder {
+    color: #c1c1c1;
+}
+
+#search {
+    border: none;
+    width: 431px;
+    font-size: 15px;
+    height: 4rem;
+
+}
+
+#search:focus {
+    outline: none;
+
+}
+
+#search-wrapper:focus {
+    border: 2px solid blue;
+}
+
+.search-icon {
+    margin: 16px 4px 16px 13px;
+    color: #c1c1c1;
+    font-size: 30px;
+}
+
+#search-button {
+    border: none;
+    cursor: pointer;
+    color: #c1c1c1;
+    border-radius: 74%;
+    padding: 0px 19px;
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+    background-size: 200% auto;
+    transition: 0.5s;
+}
+
+#search-button:hover {
+    background-position: right center;
+}
+
+#search-button svg {
+    font-size: 30px;
+
+}
+
+
+
 @media(max-width:770px) {
-    .search-input{
-        width: 12rem;
+    .search-input {
+        width: 44%;
     }
 }
 
@@ -202,9 +334,6 @@ li.page-item.active {
         gap: 10px;
     }
 
-    .search-input {
-        width: 10rem;
-    }
 
     .search-btn {
         width: 77px;
@@ -220,18 +349,22 @@ li.page-item.active {
         flex-basis: 8.66% !important;
         max-width: 8.66% !important;
     }
-    .page-link{
+
+    .page-link {
         font-size: 10px;
         padding: 6px;
     }
-    .pagination{
+
+    .pagination {
         gap: 4px;
         margin-left: -47px;
     }
+
     .search-box {
         height: 60px;
     }
-    .serach-heading{
+
+    .serach-heading {
         font-size: 21px;
     }
 }

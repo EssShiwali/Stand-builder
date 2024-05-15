@@ -2,13 +2,13 @@
 
 *{
   scroll-behavior: smooth;
-
 }
+
 :root {
-  --main-clr: #FA7070;
-  --sub-clr:#FEFDED;
-  --green:#C6EBC5;
-  --grn-dark:#A1C398;
+  --main-clr: #27374D;
+  --sub-clr:#DDE6ED;
+  /* --green:#9DB2BF;
+  --grn-dark:#A1C398; */
 
 }
 
@@ -17,6 +17,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  overflow-x: clip;
   }
 
 .row {

@@ -1,6 +1,11 @@
+'use client'
+import { useState } from "react";
 import { GoPlus } from "react-icons/go";
 import './Navbar.css'
+
 const dropList = () => {
+
+
     return (
         <div className="dropdown-content">
 

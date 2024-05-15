@@ -1,0 +1,15 @@
+.footer-container {
+    color: white;
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+    background-size: 200% auto;
+    height: 10rem;
+    display: grid;
+
+}
+
+.footer-main{
+text-align: center;
+}
+/* .copyright{
+    border-top:1px solid white;
+} */

@@ -1,6 +1,6 @@
 
 'use client';
-import React, { useState , useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './SearchBar.css';
 import BuildersData from '../Components/Data/BuildersList';
 import { IoIosSearch } from "react-icons/io";
@@ -88,31 +88,38 @@ const SearchBar = () => {
   return (
     <>
       <div className="search-box">
+        <p class="item-1">This is your last chance. After this, there is no turning back.</p>
+
+        <p class="item-2">You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe.</p>
+
+        <p class="item-3">You take the red pill - you stay in Wonderland and I show you how deep the rabbit-hole goes.</p>
       </div>
       <div className="container">
-        <div className="row">
-          <div className="col-3 col-m-1"></div>
-          <div className="col-6 col-m-10">
-            <div className="searchbox2" >
-              <h1 className='serach-heading'>Find exhibition stand builders</h1>
-              <div className="searchBar-main">
-                <span className='loaction-iconSrch'><GrLocation /></span>
-                <input
-                  type="text"
-                  placeholder="Enter a city name"
-                  value={search}
-                  onChange={handleInputChange}
-                  onKeyDown={handleKeyDown}
-                  className='search-input'
-                />
-                <button onClick={handleSearchClick} className='search-btn'>Search <IoIosSearch style={{ "marginBottom": "-3px" }} /></button>
-              </div>
-              {loading && <span class="loader"></span>}
-              {!loading && builders.length === 0 && searchPerformed && <p className="not-found">No builders found</p>}
-            </div></div>
-          <div className="col-3 col-m-1"></div>
+
+        <div className="searchbox2" >
+          <h1 className='serach-heading'>Find exhibition stand builders</h1>
+
         </div>
-        </div>
+
+          <div id="search-wrapper">
+
+            <GrLocation  className='search-icon'/>
+
+            <input id="search"
+              placeholder="Enter a city name"
+              value={search}
+              onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
+            />
+            <button id="search-button" onClick={handleSearchClick}><IoIosSearch /></button>
+
+          </div>
+      
+
+        {loading && <div className="loader-box"><span class="loader"></span></div>}
+        {!loading && builders.length === 0 && searchPerformed && <p className="not-found">No builders found</p>}
+      </div>
+
       <div className="container">
         <div className='StandBuilder'>
           {builders.length > 0 && <h4>Stand builders in {search}<PiArrowElbowRightDownFill /></h4>}
