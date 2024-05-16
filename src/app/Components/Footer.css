@@ -117,3 +117,8 @@
     text-transform: uppercase;
     padding: 20px 0px;
 }
+
+.footer-content ul{
+    list-style: none;
+    text-align: center;
+}
