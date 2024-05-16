@@ -1,15 +1,118 @@
-.footer-container {
+.footer-wrapper {
+    margin-top: 150px;
+}
+.footer {
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+    background-size: 200% auto;
+    clip-path: polygon(0 0, 50% 50px, 100% 0, 100% 100%, 0 100%);
+    margin: -114px 0px -1px 0px;
+    height: 10rem;
+}
+
+.footer-content {
+    background-color: var(--main-clr);
+    color: white;
+    opacity: .8;
+    z-index: 1;
+    padding: 20px;
+    border-radius: 34px 0px 0px 0px;
+    border: 3px solid white;
+    box-shadow: 2px 5px 10px #00000054;
+    position: relative;
+}
+
+.footer-content h4{
+    text-align: center;
+    border-bottom: 1px solid #ffffff5e;
+    margin: 0px;
+    padding: 10px 0px;
+}
+
+.social-menu {
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+    background-size: 200% auto;
+
+}
+
+.social-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 14px 0px 27px 0px;
+    gap: 40px;
+    margin: 0px;
+}
+
+.social-menu li {
+    border-radius: 50%;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    padding: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, .5);
+    transition: .6s;
+    cursor: pointer;
+}
+
+.social-menu li:hover {
+    transform: translate(0, -10%);
+
+}
+
+.social-menu svg {
+    color: black;
+    font-size: 2rem;
+    transition: .3s;
+}
+
+.social-menu ul a:hover svg {
+    fill: white;
+}
+
+.social-menu ul a:nth-child(1) li:hover {
+    background-color: #3B5998;
+}
+
+.social-menu ul a:nth-child(2) li:hover {
+    background-color: #E4405F;
+}
+
+.social-menu ul a:nth-child(3) li:hover {
+    background-color: #0077b5;
+}
+
+.social-menu ul a:nth-child(4) li:hover {
+    background-color: rgb(51, 50, 50);
+}
+
+.copyrigt {
+    text-align: center;
     color: white;
     background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
     background-size: 200% auto;
-    height: 10rem;
-    display: grid;
-
 }
 
-.footer-main{
-text-align: center;
+.copyrigt p {
+    margin: 0px;
+    padding: 24px 0 18px 0;
+    border-top: .5px solid #ffffff5e;
+    width: 90%;
+    margin: auto;
 }
-/* .copyright{
-    border-top:1px solid white;
-} */
+.footer-cities{
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+    background-size: 200% auto;
+    margin: -16px 0px;
+}
+.footer-cities ul{
+    list-style: none;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    text-transform: uppercase;
+    padding: 20px 0px;
+}

@@ -1,5 +1,8 @@
 
+import Content from "./Content"
+import CountryList from "./CountryList"
 import SearchBar from "./SearchBar"
+import Services from "./Services"
 
 
 const HomePage = () => {
@@ -7,7 +10,9 @@ const HomePage = () => {
     <>
 
  <SearchBar />
-
+ <CountryList />
+ <Content />
+<Services />
     </>
   )
 }

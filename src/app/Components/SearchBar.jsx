@@ -101,20 +101,20 @@ const SearchBar = () => {
 
         </div>
 
-          <div id="search-wrapper">
+        <div id="search-wrapper">
 
-            <GrLocation  className='search-icon'/>
+          <GrLocation className='search-icon' />
 
-            <input id="search"
-              placeholder="Enter a city name"
-              value={search}
-              onChange={handleInputChange}
-              onKeyDown={handleKeyDown}
-            />
-            <button id="search-button" onClick={handleSearchClick}><IoIosSearch /></button>
+          <input id="search"
+            placeholder="Enter a city name"
+            value={search}
+            onChange={handleInputChange}
+            onKeyDown={handleKeyDown}
+          />
+          <button id="search-button" onClick={handleSearchClick}><IoIosSearch /></button>
 
-          </div>
-      
+        </div>
+
 
         {loading && <div className="loader-box"><span class="loader"></span></div>}
         {!loading && builders.length === 0 && searchPerformed && <p className="not-found">No builders found</p>}
@@ -161,6 +161,7 @@ const SearchBar = () => {
           </nav>
         )}
       </div>
+    
     </>
   );
 };

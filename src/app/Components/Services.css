@@ -1,0 +1,88 @@
+.serviceBox{
+    color: #6b9fe3;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.serviceBox .title{
+    background: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    margin: 0 0 30px;
+    border: 3px solid #6b9fe3;
+    display: inline-block;
+}
+.serviceBox .service-content{
+    color:#fff;
+    background: #6b9fe3;
+    padding: 15px;
+    margin: 0 0 40px;
+    border-radius: 30px;
+    border: 10px solid #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+.serviceBox .description{
+    font-size: 15px;
+    line-height: 25px;
+    margin: 0;
+}
+.serviceBox .service-icon{
+    background: #6b9fe3;
+    font-size: 40px;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 100px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+} 
+.serviceBox .service-icon:before,
+.serviceBox .service-icon:after{
+    content: "";
+    background: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: -1;
+}
+.serviceBox .service-icon:after{
+    background: #6b9fe3;
+    width: 3px;
+    height: 40px;
+    margin: 0 auto;
+    box-shadow: none;
+    border-radius: 0;
+    left: 0;
+    right: 0;
+    top: -40px;
+}
+
+.services-main{
+    margin-top: 50px;   
+}
+.services-main h2{
+    text-align: center;
+    margin: 44px 0;
+    font-size: 3rem;
+       color: var(--main-clr);
+}
+.service-box-cards{
+ 
+    display: flex;
+    gap: 20px;
+
+}
+
+@media only screen and (max-width: 990px){
+    .serviceBox{ margin: 0 0 40px; }
+}
+

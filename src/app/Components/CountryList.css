@@ -1,0 +1,57 @@
+/* .country-backround{
+background-image: url('./Photo/worldmap.png');
+background-repeat: no-repeat;
+background-size: 100% 100%;
+} */
+
+.country-lists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 7px 0px 25px 0px;
+    justify-content: center;
+}
+
+.country-heading {
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--main-clr);
+    font-size: 2rem;
+    border-bottom: 3px solid var(--main-clr);
+}
+
+.country-cards {
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 9px 15px;
+    backdrop-filter: blur(1px);
+    color: white;
+    /* box-shadow: 2px 3px 8px #beb7b799; */
+    width: 134px;
+    height: 50px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+    background-size: 200% auto;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    gap: 10px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
+}
+
+.country-cards svg{
+    width: 27px;
+
+}
+.country-cards:hover{
+    background-position: right center;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
+
+}
+
+
