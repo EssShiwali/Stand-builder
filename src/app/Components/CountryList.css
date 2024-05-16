@@ -35,7 +35,7 @@ background-size: 100% 100%;
     transition: 0.5s;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 14px;
     gap: 10px;
     cursor: pointer;

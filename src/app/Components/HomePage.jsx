@@ -1,4 +1,5 @@
 
+// import Caraousel from "./Caraousel"
 import Content from "./Content"
 import CountryList from "./CountryList"
 import SearchBar from "./SearchBar"
@@ -9,10 +10,11 @@ const HomePage = () => {
   return (
     <>
 
- <SearchBar />
- <CountryList />
- <Content />
-<Services />
+      <SearchBar />
+      <CountryList />
+      {/* <Caraousel /> */}
+      <Content />
+      <Services />
     </>
   )
 }
