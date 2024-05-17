@@ -1,11 +1,11 @@
+'use client';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './Caraousel.css';
+import './Carousel.css';
 
 
 const MultiItemCarousel = () => {
-
 
     const settings = {
         infinite: true,
@@ -32,28 +32,30 @@ const MultiItemCarousel = () => {
     };
 
     return (
-        <div className='container'  >
+        <>
             <Slider {...settings}>
 
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
+             <div><div className='slider'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id natus maxime voluptatibus eveniet, ipsum ab expedita nobis culpa explicabo,</div></div> 
+             <div><div className='slider'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id natus maxime voluptatibus eveniet, ipsum ab expedita nobis culpa explicabo,</div></div> 
+             <div><div className='slider'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id natus maxime voluptatibus eveniet, ipsum ab expedita nobis culpa explicabo,</div></div> 
+             <div><div className='slider'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id natus maxime voluptatibus eveniet, ipsum ab expedita nobis culpa explicabo,</div></div> 
 
             </Slider>
-        </div>
+        </>
     );
 };
 
 
-const Caraousel = () => {
+const Carousel = () => {
     return (
         <>
             <div className="container">
+                <div className='slider-main'>
                 <MultiItemCarousel />
+                </div>
             </div>
         </>
     )
 }
 
-export default Caraousel;
+export default Carousel;

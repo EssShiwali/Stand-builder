@@ -96,7 +96,7 @@ const Footer = () => {
 
             
             <div className="copyrigt">
-                <p>  Lorem ipsem  &copy; {new Date().getFullYear()} .All rights reserved.</p>
+                <p>  Lorem ipsum  &copy; {new Date().getFullYear()} .All rights reserved.</p>
             </div>
 
 

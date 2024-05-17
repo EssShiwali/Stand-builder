@@ -1,10 +1,8 @@
-
-// import Caraousel from "./Caraousel"
 import Content from "./Content"
 import CountryList from "./CountryList"
 import SearchBar from "./SearchBar"
 import Services from "./Services"
-
+import Carousel from "./Carousel"
 
 const HomePage = () => {
   return (
@@ -12,7 +10,8 @@ const HomePage = () => {
 
       <SearchBar />
       <CountryList />
-      {/* <Caraousel /> */}
+      <Content />
+      <Carousel />
       <Content />
       <Services />
     </>

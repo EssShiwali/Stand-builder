@@ -1,11 +1,13 @@
-import React from 'react'
+import './Content.css';
 
 const Content = () => {
   return (
-    <div className="backround">
-    <div className="image">
-  <div className="container"><hr />
-    <div className="lorem" style={{ textAlign: 'center' }}>
+
+  <div className="container">
+    <div className="content-heading">
+    <h2>Lorem ipsum</h2>
+    </div>
+    <div className="lorem" >
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, architecto nesciunt quam voluptates
       deserunt odio necessitatibus. A minus exercitationem enim illum nobis eos at impedit facilis ipsa,
       praesentium necessitatibus tenetur aut ducimus provident vero, magnam magni deserunt veniam quasi
@@ -28,8 +30,7 @@ const Content = () => {
       dignissimos ipsam.
     </div>
   </div>
-  </div>
-  </div>
+ 
   )
 }
 

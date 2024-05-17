@@ -1,0 +1,15 @@
+.slider {
+    color: #fff;
+    background: #6b9fe3;
+    padding: 15px;
+    margin: 80px 20px;
+    border-radius: 30px;
+    border: 10px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* .slider-main{
+     margin: 100px 0px 0px 0px;
+    border-top:1px solid var(--main-clr); 
+    border-bottom:1px solid var(--main-clr);
+} */

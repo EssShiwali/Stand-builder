@@ -103,9 +103,5 @@ a {
   text-decoration: none;
 }
 
-.image {
-  background-image: url('../app/Components/Photo/city-bg.webp');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 
-}
+
