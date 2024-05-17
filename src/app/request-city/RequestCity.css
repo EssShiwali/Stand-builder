@@ -1,0 +1,9 @@
+
+.request-city-form{
+    padding-top: 200px;
+}
+
+.stand-size-select,.budget-select{
+    display: flex;
+    flex-wrap: nowrap;
+}

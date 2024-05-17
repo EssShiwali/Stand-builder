@@ -8,7 +8,7 @@
 }
 
 .serach-heading {
-    margin-left: var(--m-l);
+    /* margin-left: var(--m-l); */
     text-transform: uppercase;
     font-weight: 800;
     color: white;
@@ -147,14 +147,12 @@ li.page-item.active {
     position: absolute;
     display: block;
     top: 5em;
-
     width: 60%;
-
     font-size: 2em;
-
     animation-duration: 20s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+    text-align: center;
 }
 
 .item-1 {

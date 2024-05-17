@@ -8,6 +8,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 import './Navbar.css'
 import Loginpopup from './Loginpopup';
+import Link from 'next/link';
 
 
 const Navbar = () => {
@@ -36,7 +37,7 @@ const Navbar = () => {
     
             <div className="container">
             <div className="header">
-                <div className="logo"><DiZend /></div>
+                <div className="logo"><Link href='/'><DiZend /></Link></div>
                 <span>abcd@example.com | 937783883</span>
                 <div ><button className="header-button ">Get 5 free quotations</button></div>
             </div>
@@ -63,7 +64,7 @@ const Navbar = () => {
                                 <DropList className="DropList" />
                             </label></li>
 
-                        <li>Home</li>
+                            <Link href='/'>   <li>Home</li></Link>
                         <li>Custom Exhibition Stands</li>
                         <li>Trade Shows</li>
                         <li>Blogs</li>

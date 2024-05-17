@@ -9,9 +9,10 @@ import { GrLocation } from "react-icons/gr";
 import Link from 'next/link';
 import Image from 'next/image';
 import defaultimage from './Photo/defaultimage.jpg'
-
+import { useRouter } from 'next/navigation'
 
 const SearchBar = () => {
+  const router = useRouter()
   const [loading, setLoading] = useState(false);
   const [builders, setBuilders] = useState([]);
   const [search, setSearch] = useState('');
@@ -117,7 +118,7 @@ const SearchBar = () => {
 
 
         {loading && <div className="loader-box"><span class="loader"></span></div>}
-        {!loading && builders.length === 0 && searchPerformed && <p className="not-found">No builders found</p>}
+        {!loading && builders.length === 0 && searchPerformed && router.push('./request-city')}
       </div>
 
       <div className="container">

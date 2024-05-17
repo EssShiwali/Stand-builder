@@ -22,12 +22,7 @@ const Content = () => {
       quis voluptatibus odio similique quo iusto cupiditate sapiente veritatis sint nemo, perspiciatis
       fugiat. Aut asperiores consequuntur fuga aliquam aperiam id at cupiditate quibusdam expedita.
       Accusamus nobis, dolore excepturi maxime illo saepe! Fuga at temporibus praesentium eveniet natus
-      optio ratione libero unde, beatae cumque, sit qui laborum assumenda omnis distinctio. Ab veritatis
-      nulla nisi consectetur officia nesciunt quidem, molestiae tenetur, dignissimos reiciendis
-      perspiciatis eaque accusamus expedita id veniam, facilis placeat? Fuga corrupti veritatis
-      voluptatibus tempora dolores fugiat eveniet, delectus eius optio quod nemo possimus quae molestias
-      veniam accusamus distinctio ipsa explicabo adipisci reprehenderit maxime voluptas earum
-      dignissimos ipsam.
+      optio ratione libero unde, beatae cumque, sit qui laborum assumenda omnis distinctio. 
     </div>
   </div>
   </div>

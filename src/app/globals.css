@@ -12,6 +12,9 @@
   --grn-dark:#A1C398; */
 
 }
+*:focus-visible{
+  outline: none!important;
+}
 
 body {
   box-sizing: border-box;
