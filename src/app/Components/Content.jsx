@@ -2,7 +2,7 @@ import './Content.css';
 
 const Content = () => {
   return (
-
+<div className="content-backround">
   <div className="container">
     <div className="content-heading">
     <h2>Lorem ipsum</h2>
@@ -30,7 +30,7 @@ const Content = () => {
       dignissimos ipsam.
     </div>
   </div>
- 
+  </div>
   )
 }
 
