@@ -8,12 +8,14 @@
 :root {
   --main-clr: #27374D;
   --sub-clr: #DDE6ED;
-  /* --green:#9DB2BF;
-  --grn-dark:#A1C398; */
-
+ 
 }
 *:focus-visible{
   outline: none!important;
+}
+
+input:-internal-autofill-selected{
+  background-color: transparent!important;
 }
 
 body {

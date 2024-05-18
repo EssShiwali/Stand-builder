@@ -1,9 +1,150 @@
-
-.request-city-form{
+/* .request-city-form{
     padding-top: 200px;
+} */
+
+.request-city-form {
+    width: 87%;
+    margin: auto;
+    border: 1px solid var(--main-clr);
+    padding: 20px;
+    border-radius: 30px;
+    border: 4px solid #6b9fe3;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-.stand-size-select,.budget-select{
+
+
+
+.request-city-heading {
+    padding: 90px 0px 30px 0px;
+    text-align: center;
+    color: var(--main-clr);
+    border-bottom: 3px solid var(--main-clr);
+}
+
+.stand-size-select,
+.budget-select {
     display: flex;
     flex-wrap: nowrap;
 }
+
+.form-div-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    gap: 23px;
+}
+
+.form-div-1 input {
+    width: 208px;
+    height: 39px;
+    border: 1px solid #e5e5ea;
+    transition: border-color ease-in-out 0.15s;
+    border-radius: 6px;
+    padding-left: 20px;
+
+}
+
+.form-div-1 input:hover,
+.upload-files:hover,
+.event-details textarea:hover {
+    border-color: #3498ff;
+}
+
+.form-div-1 input:focus,
+.event-details textarea:focus,
+.upload-files:focus-within,
+.rq-select-country:focus,
+.rq-select:focus {
+    border-color: #3498ff;
+    outline: 3px solid rgba(52, 152, 255, 0.25) !important;
+
+}
+
+
+.event-details textarea {
+    width: 99.5%;
+    margin-top: 20px;
+    height: 120px;
+    border-radius: 6px;
+    border: 1px solid #e5e5ea;
+    transition: border-color ease-in-out 0.15s;
+    border-radius: 6px;
+
+}
+
+.upload-files {
+
+    padding: 10px 63px;
+    border-radius: 6px;
+    border: 1px solid #e5e5ea;
+    transition: border-color ease-in-out 0.15s;
+    border-radius: 6px;
+}
+
+.upload-files-button {
+    /* color: #fff;
+    background: #6b9fe3;
+   
+    border-radius: 30px;
+    border: 3px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); */
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 3px 10px;
+    display: block;
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+    background-size: 200% auto;
+    transition: 0.5s;
+
+}
+
+.upload-files-button:hover {
+    background-position: right center;
+}
+
+
+.form-submit-button {
+    font-size: 20px;
+    padding: 9px 37px;
+}
+
+.rq-select {
+    border: 1px solid #e5e5ea;
+    border-radius: 0px 6px 6px 0px;
+    color: #757575;
+}
+
+#rq-select-input {
+    border-radius: 6px 0px 0px 6px;
+}
+
+.rq-select-country {
+    border: 1px solid #e5e5ea;
+    border-radius: 6px;
+    color: #757575;
+    height: 40px;
+    width: 232px;
+    padding-left: 20px;
+}
+
+.align-button {
+    margin-top: 51px;
+    display: flex;
+    justify-content: center;
+}
+
+.request-city-form h3 {
+    padding: 10px;
+    background-color: rgba(52, 152, 255, 0.25);
+    color: var(--main-clr);
+    border-radius: 6px;
+
+}
+
+/* .rq-select option{
+    background-color: red;
+} */

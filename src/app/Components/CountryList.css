@@ -1,8 +1,4 @@
-/* .country-backround{
-background-image: url('./Photo/worldmap.png');
-background-repeat: no-repeat;
-background-size: 100% 100%;
-} */
+
 
 .country-lists {
     display: flex;
@@ -26,7 +22,6 @@ background-size: 100% 100%;
     padding: 9px 15px;
     backdrop-filter: blur(1px);
     color: white;
-    /* box-shadow: 2px 3px 8px #beb7b799; */
     width: 134px;
     height: 50px;
     font-weight: bold;
@@ -53,5 +48,4 @@ height: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
 
 }
-
 

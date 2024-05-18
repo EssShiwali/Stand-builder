@@ -282,7 +282,7 @@ li.res-drp:hover {
         top: 129px;
         height: 100%;
         display: block;
-        background-color: #FEFDED;
+        background-color: var(--sub-clr);
         transition: 0.3s;
         box-shadow: 0px 13px 20px #dddddd;
     }
@@ -301,7 +301,7 @@ li.res-drp:hover {
     .nav-links li {
         padding: 28px 11px;
         margin-left: -6px;
-        border-bottom: 2px solid #FA7070;
+        border-bottom: 2px solid var(--main-clr);
     }
 
 
@@ -324,7 +324,7 @@ li.res-drp:hover {
         margin: 25px 0 -18px -11px;
         position: static;
         box-shadow: none;
-        background-color: #FEFDED;
+        background-color: var(--sub-clr);
     }
 
     .res-drpbtn .rotate1 {
