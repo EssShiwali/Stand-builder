@@ -6,31 +6,31 @@ import { PiHandCoinsDuotone } from "react-icons/pi";
 const Services = () => {
     return (
         <>
-            <div class="container">
+            <div className="container">
             <div className="services-main">
                 <h2>HOW WE WORK</h2>
-                <div class="row">
+                <div className="row">
 
                     <div className="service-box-cards">
 
-                        <div class="serviceBox">
-                            <h3 class="title">Lorem</h3>
-                            <div class="service-content">
-                                <p class="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
+                        <div className="serviceBox">
+                            <h3 className="title">Lorem</h3>
+                            <div className="service-content">
+                                <p className="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
                             </div>
-                            <div class="service-icon">
+                            <div className="service-icon">
                                 <span><FaRegListAlt /></span>
                             </div>
                         </div>
 
 
 
-                        <div class="serviceBox">
-                            <h3 class="title">Lorem</h3>
-                            <div class="service-content">
-                                <p class="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
+                        <div className="serviceBox">
+                            <h3 className="title">Lorem</h3>
+                            <div className="service-content">
+                                <p className="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
                             </div>
-                            <div class="service-icon">
+                            <div className="service-icon">
                                 <span><HiOutlineClipboardDocumentList /></span>
                             </div>
                         </div>
@@ -38,12 +38,12 @@ const Services = () => {
 
 
 
-                        <div class="serviceBox">
-                            <h3 class="title">Lorem</h3>
-                            <div class="service-content">
-                                <p class="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
+                        <div className="serviceBox">
+                            <h3 className="title">Lorem</h3>
+                            <div className="service-content">
+                                <p className="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
                             </div>
-                            <div class="service-icon">
+                            <div className="service-icon">
                                 <span><PiHandCoinsDuotone /></span>
                             </div>
                         </div>

@@ -65,7 +65,7 @@ const Footer = () => {
             </div>
 
 
-            <div class="social-menu">
+            <div className="social-menu">
                 <ul>
                     <Link href='https://www.facebook.com/'><li><FaFacebookF className='fab' style={{fontSize:'0.8rem'}}/></li></Link>
                     <Link href='https://www.instagram.com/'><li><GrInstagram className='fab' /></li></Link>

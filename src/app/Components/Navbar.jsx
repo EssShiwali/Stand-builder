@@ -49,8 +49,8 @@ const Navbar = () => {
                     {clicked ? <RxCross1 /> : <RxHamburgerMenu />}
                 </label>
                 <div className="nav-links">
-                    <div class="dropdown">
-                        <button class="dropbtn">EXHIBITION STAND WORLDWIDE
+                    <div className="dropdown">
+                        <button className="dropbtn">EXHIBITION STAND WORLDWIDE
                             <MdOutlineKeyboardArrowDown className='rotate1' />
                         </button>
                         <DropList />
