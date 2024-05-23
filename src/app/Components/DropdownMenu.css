@@ -1,0 +1,131 @@
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-trigger {
+  cursor: pointer;
+  padding: 22px 16px;
+  background-color: var(--sub-clr);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  font-weight: bold;
+  font-size: var(--nav-font-size);
+
+}
+
+.dropdown-trigger:hover {
+  background-color: white;
+}
+
+.rotate1 {
+  transition: 0.3s;
+}
+
+.dropdown-trigger:hover .rotate1,
+.dropdown-trigger.open .rotate1 {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 4;
+  height: 350px;
+  width: 550px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .2s ease;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+  width: 5px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+  background: rgb(196, 194, 194);
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background-color: var(--main-clr);
+}
+
+
+.dropdown-menu.open {
+  max-height: 350px;
+  overflow-y: scroll;
+}
+
+.dropdown-item {
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item a {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(161, 200, 219, 0.886) !important;
+
+}
+
+.dropdown-item:hover a {
+  color: white !important;
+
+}
+
+.dropdownlist {
+  display: flex;
+  flex-direction: column;
+  margin-left: -38px;
+  margin-top: 0px;
+}
+
+.submenu {
+  transition: .3s;
+}
+
+.submenu-ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+}
+
+.submenu-item:hover{
+background-color: var(--sub-clr)!important;
+}
+.submenu-item:hover a{
+color: black!important;
+  }
+@media(max-width:850px) {
+  .dropdown-menu.open {
+    position: static;
+    display: block;
+
+    box-shadow: none;
+  }
+
+  .dropdown-menu {
+    width: 300px;
+    background-color: var(--sub-clr);
+
+  }
+
+  .dropdown-trigger {
+    padding: 22px 22px;
+  }
+
+}

@@ -57,9 +57,6 @@
 
 }
 
-
-
-
 .loader {
     width: 48px;
     height: 48px;
@@ -108,7 +105,6 @@
     color: var(--main-clr);
     padding: 8px;
     border-radius: 4px;
-
 }
 
 .page-link:hover {
@@ -138,10 +134,9 @@ li.page-item.active {
 .searchbox2 {
     margin-top: -14%;
     text-align: center;
-
 }
 
-.item-1,
+/* .item-1,
 .item-2,
 .item-3 {
     position: absolute;
@@ -228,7 +223,7 @@ li.page-item.active {
         opacity: 0;
     }
 }
-
+ */
 
 
 
@@ -250,18 +245,33 @@ li.page-item.active {
     -1px -3px 13px 6px rgba(25,71,85,0.5); */
 
 }
-#search-wrapper:focus{
+
+#search-wrapper:focus {
     border: 3px solid red;
 }
 
-#search-wrapper input {
-    background-color: transparent;
-    color: #c1c1c1;
 
+
+.ant-select-show-search:where(.css-dev-only-do-not-override-17seli4).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    background-color: transparent;
+    border: none;
+    height: 62px;
+    width: 400px;
+    /* width: 239px; */
 }
 
-#search-wrapper input::placeholder {
+:where(.css-dev-only-do-not-override-17seli4).ant-select-single .ant-select-selector .ant-select-selection-placeholder {
     color: #c1c1c1;
+}
+
+.ant-select-focused:where(.css-dev-only-do-not-override-17seli4).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) .ant-select-selector {
+    border-color: transparent;
+    box-shadow: none;
+
+}
+.ant-select-show-search:where(.css-dev-only-do-not-override-17seli4).ant-select:not(.ant-select-customize-input) .ant-select-selector input{
+    color: white;
+    font-size: 16px;
 }
 
 #search {
@@ -292,7 +302,7 @@ li.page-item.active {
     cursor: pointer;
     color: #c1c1c1;
     border-radius: 74%;
-    padding: 0px 19px;
+    padding: 0px 18px;
     background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
     background-size: 200% auto;
     transition: 0.5s;
@@ -335,22 +345,6 @@ li.page-item.active {
         gap: 10px;
     }
 
-
-    .search-btn {
-        width: 77px;
-        padding: 7px;
-    }
-
-    .col-m-10 {
-        flex-basis: 83.33% !important;
-        max-width: 83.33% !important;
-    }
-
-    .col-m-1 {
-        flex-basis: 8.66% !important;
-        max-width: 8.66% !important;
-    }
-
     .page-link {
         font-size: 10px;
         padding: 6px;
@@ -360,13 +354,15 @@ li.page-item.active {
         gap: 4px;
         margin-left: -47px;
     }
+    .ant-select-show-search:where(.css-dev-only-do-not-override-17seli4).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+        width: 239px;
+    }
 
-    .search-box {
+    /* .search-box {
         height: 60px;
-    }
+    } */
 
-    .serach-heading {
+    /* .serach-heading {
         font-size: 21px;
-    }
+    } */
 }
-

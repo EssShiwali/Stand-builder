@@ -1,45 +1,63 @@
 'use client';
 
 import { useState } from 'react';
-import { Button, Dialog, DialogTrigger, Heading, Modal } from 'react-aria-components';
-import { LuEye, LuEyeOff } from "react-icons/lu";
+// import { Button, Dialog, DialogTrigger, Heading, Modal } from 'react-aria-components';
 import './Navbar.css'
 import './Loginpopup.css'
+import { Input, Modal } from 'antd';
 
 
 const Loginpopup = () => {
     const [currState, setCurrState] = useState("Login");
     const [password, setPassword] = useState("");
     const [reEnteredPassword, setReEnteredPassword] = useState("");
-    const [passwordVisible, setPasswordVisible] = useState(false);
-    const [reEnteredPasswordVisible, setReEnteredPasswordVisible] = useState(false);
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
-    const [passwordsMatch, setPasswordsMatch] = useState(true); // New state for password match
+    const [passwordsMatch, setPasswordsMatch] = useState(true);
+    const [successMessage, setSuccessMessage] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
+    const [modal2Open, setModal2Open] = useState(false);
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
-        // Check if passwords match
         if (currState === "Sign Up" && password !== reEnteredPassword) {
             setPasswordsMatch(false);
             return;
         }
-
-        // Reset passwords match state
         setPasswordsMatch(true);
 
-        // Proceed with form submission logic
-        // For now, just console log the form data
-        console.log("Form submitted with data:", { email, name, password });
+        const user = { name, email, password };
 
-        // Close the modal
-        // Implement modal closing logic as needed
+        try {
+            const response = await fetch('/api/register', {
+                method: 'POST',
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(user),
+            });
+
+            // Set the status based on the response from the API route
+            if (response.status === 200) {
+                setName("");
+                setEmail("");
+                setPassword("");
+                setReEnteredPassword("");
+                setSuccessMessage("Your account has been created!");
+                setErrorMessage("");
+            } else {
+                setSuccessMessage("");
+                setErrorMessage("There was an error. Please try again.")
+            }
+        } catch (e) {
+            console.log(e);
+            setSuccessMessage("");
+            setErrorMessage("There was an error. Please try again.");
+        }
     };
 
     return (
         <>
-            <DialogTrigger>
+            {/* <DialogTrigger>
                 <Button className='sign-in'>Sign up</Button>
 
                 <Modal>
@@ -65,50 +83,35 @@ const Loginpopup = () => {
                                             value={email}
                                             onChange={event => setEmail(event.target.value)}
                                         />
-                                        <div className="password-field">
-                                            <input
-                                                className='relative-pass'
-                                                name="password"
-                                                placeholder="Enter Password"
-                                                type={passwordVisible ? "text" : "password"}
-                                                value={password}
-                                                required
-                                                onChange={event => setPassword(event.target.value)}
-                                            />
-                                            <div
-                                                className="toggle-password"
-                                                onClick={() => setPasswordVisible(!passwordVisible)}
-                                            >
-                                                {passwordVisible ? <LuEyeOff /> : <LuEye />}
-                                            </div>
-                                        </div>
-                                   
-                                    {currState === "Sign Up" && (
-                                        <>
-                                            <div className="password-field">
-                                                <input
-                                                    className='relative-pass'
-                                                    name="reEnteredPassword"
-                                                    placeholder="Re-enter Password"
-                                                    type={reEnteredPasswordVisible ? "text" : "password"}
-                                                    value={reEnteredPassword}
+
+
+
+                                        <Input.Password
+                                            placeholder="Password"
+                                            required
+                                            value={password}
+                                            onChange={event => setPassword(event.target.value)}
+                                            className='password-input'
+                                        />
+
+                                        {currState === "Sign Up" && (
+                                            <>
+                                                <Input.Password
+                                                    placeholder="Re-enter password"
                                                     required
+                                                    value={reEnteredPassword}
                                                     onChange={event => setReEnteredPassword(event.target.value)}
+                                                    className='password-input'
                                                 />
-                                                <div
-                                                    className="toggle-password "
-                                                    onClick={() => setReEnteredPasswordVisible(!reEnteredPasswordVisible)}
-                                                >
-                                                    {reEnteredPasswordVisible ? <LuEyeOff /> : <LuEye />}
-                                                </div>
-                                            </div>
+                                                {!passwordsMatch && <p className='error-message'>Passwords do not match!</p>}
+                                            </>
+                                        )}
+                                    </div>
 
-                                           
 
-                                            {!passwordsMatch && <p>Passwords do not match!</p>}
-                                        </>
-                                    )}
-                                     </div>
+                                    {successMessage && <p className='success-message'>{successMessage}</p>}
+                                    {errorMessage && <p className='error-message'>{errorMessage}</p>}
+
                                     <button type="submit">{currState === "Sign Up" ? "Create Account" : "Login"}</button>
 
                                     {currState === "Sign Up" && (
@@ -128,8 +131,86 @@ const Loginpopup = () => {
                         )}
                     </Dialog>
                 </Modal>
-            </DialogTrigger>
+            </DialogTrigger> */}
+
+
+
+            <button className='sign-in' onClick={() => setModal2Open(true)}> Sign in</button>
+
+            <Modal
+                title={currState}
+                centered
+                open={modal2Open}
+                onOk={() => setModal2Open(false)}
+                onCancel={() => setModal2Open(false)}
+            >
+                <form onSubmit={handleSubmit}>
+
+                    <div className='login_popup_inputs'>
+                        {currState === "Login" ? null : (
+
+                            <Input
+                                placeholder="Your name"
+                                required
+                                value={name}
+                                onChange={event => setName(event.target.value)}
+                            />
+
+                        )}
+
+                        <Input
+                            type="email"
+                            placeholder='Your Email'
+                            required
+                            value={email}
+                            onChange={event => setEmail(event.target.value)}
+                        />
+
+
+                        <Input.Password
+                            placeholder="Password"
+                            required
+                            value={password}
+                            onChange={event => setPassword(event.target.value)}
+                            className='password-input'
+                        />
+
+                        {currState === "Sign Up" && (
+                            <>
+                                <Input.Password
+                                    placeholder="Re-enter password"
+                                    required
+                                    value={reEnteredPassword}
+                                    onChange={event => setReEnteredPassword(event.target.value)}
+                                    className='password-input'
+                                />
+                                {!passwordsMatch && <p className='error-message'>Passwords do not match!</p>}
+                            </>
+                        )}
+                    </div>
+
+
+                    {successMessage && <p className='success-message'>{successMessage}</p>}
+                    {errorMessage && <p className='error-message'>{errorMessage}</p>}
+                    <div className="button-align">
+                        <button type="submit" className='sign-in'>{currState === "Sign Up" ? "Sign up" : "Login"}</button>
+                    </div>
+                    {currState === "Sign Up" && (
+                        <div className='login_popup_condition'>
+                            <input type="checkbox" required />
+                            <p>By continuing, I agree to the terms of use and privacy policy.</p>
+                        </div>
+                    )}
+
+                    {currState === "Login" ?
+                        <p>Create a new account? <span className='login-type' onClick={() => setCurrState("Sign Up")}>Click here</span></p> :
+                        <p>Already have an account? <span className='login-type' onClick={() => setCurrState("Login")}>Login here</span></p>
+                    }
+                </form>
+            </Modal>
         </>
+
+
     );
 }
 

@@ -89,164 +89,6 @@ button {
 }
 
 
-.dropbtn {
-    background-color: transparent;
-    border: none;
-    padding: 25px 16px;
-    font-size: var(--nav-font-size);
-    white-space: nowrap;
-    font-weight: bold;
-}
-
-.dropbtn:hover {
-    background-color: white;
-
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.res-drpbtn,
-#drp-click {
-    display: none;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    text-transform: uppercase;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    width: 550px;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height .2s ease;
-    margin-top: -1px;
-    font-size: var(--nav-font-size);
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    cursor: pointer;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: #9DB2BF;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    max-height: 350px;
-    overflow-y: auto;
-
-}
-
-.dropdown .rotate1 {
-    transition: 0.3s;
-}
-
-.dropdown:hover .rotate1 {
-    rotate: 180deg;
-}
-
-.dropdown-content::-webkit-scrollbar {
-    width: 5px;
-}
-
-.dropdown-content::-webkit-scrollbar-track {
-    background: rgb(196, 194, 194);
-}
-
-.dropdown-content::-webkit-scrollbar-thumb {
-    background-color: var(--main-clr);
-}
-
-
-
-#usa:checked~.usaList,
-#uk:checked~.ukList,
-#uae:checked~.uaeList,
-#germany:checked~.germanyList,
-#france:checked~.franceList,
-#italy:checked~.italyList,
-#switzerland:checked~.switzerlandList,
-#netherlands:checked~.netherlandsList,
-#spain:checked~.spainList,
-#belgium:checked~.belgiumList,
-#indonesia:checked~.indonesiaList,
-#brazil:checked~.brazilList,
-#india:checked~.indiaList,
-#russia:checked~.russiaList,
-#singapore:checked~.singaporeList,
-#sKorea:checked~.sKoreaList,
-#iran:checked~.iranList,
-#kuwait:checked~.kuwaitList,
-#qatar:checked~.qatarList,
-#saudi:checked~.saudiList,
-#turkey:checked~.turkeyList,
-#australia:checked~.australiaList,
-#canada:checked~.canadaList,
-#thailand:checked~.thailandList {
-    max-height: 500px;
-
-}
-
-.inner-drop {
-    display: none;
-}
-
-.inner-drop+label .rotate2 {
-    transition: .2s;
-    cursor: pointer;
-}
-
-/* Rotate arrow when dropdown is active */
-.inner-drop:checked+label .rotate2 {
-    rotate: 45deg;
-
-}
-
-.inner-list {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height .3s;
-}
-
-.inner-cities {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    border-top: 1px solid var(--main-clr);
-    border-bottom: 1px solid var(--main-clr);
-    padding: 10px;
-}
-
-.inner-cities span {
-    cursor: pointer;
-    border: 1px solid var(--main-clr);
-    font-weight: 500;
-    padding: 5px;
-    color: var(--main-clr);
-
-}
-
-.inner-cities span:hover {
-    background-color: #9DB2BF;
-
-}
-
 #menu-click,
 .hamburger {
     display: none;
@@ -254,12 +96,6 @@ button {
     font-size: 1.4rem;
     z-index: 3;
 }
-
-li.res-drp:hover {
-    background-color: transparent !important;
-    cursor: auto !important;
-}
-
 
 
 @media(max-width:850px) {
@@ -279,7 +115,8 @@ li.res-drp:hover {
         width: 300px;
         position: fixed;
         left: -100%;
-        top: 129px;
+        top: 69px;
+        overflow-y: scroll;
         height: 100%;
         display: block;
         background-color: var(--sub-clr);
@@ -298,52 +135,6 @@ li.res-drp:hover {
         z-index: 3
     }
 
-    .nav-links li {
-        padding: 28px 11px;
-        margin-left: -6px;
-        border-bottom: 2px solid var(--main-clr);
-    }
-
-
-    #drp-click:checked~.res-drpbtn .dropdown-content {
-        max-height: 350px;
-        overflow-y: auto;
-    }
-
-    .dropdown {
-        display: none;
-    }
-
-    .res-drpbtn {
-        display: block;
-        padding: 0px;
-    }
-
-    .dropdown-content {
-        width: 108%;
-        margin: 25px 0 -18px -11px;
-        position: static;
-        box-shadow: none;
-        background-color: var(--sub-clr);
-    }
-
-    .res-drpbtn .rotate1 {
-        transition: 0.3s;
-    }
-
-    #drp-click:checked+label .rotate1 {
-        rotate: 180deg;
-
-    }
-
-    .inner-list {
-        overflow-y: auto;
-    }
-
-    .dropbtn:hover,
-    .nav-links li:hover {
-        background-color: transparent;
-    }
 
 }
 
@@ -355,3 +146,5 @@ li.res-drp:hover {
     }
 
 }
+ 
+
